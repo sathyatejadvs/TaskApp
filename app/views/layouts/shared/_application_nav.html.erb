@@ -1,6 +1,8 @@
-<% if current_user %>
-	<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-<% else %>
-	<%= link_to 'Login', new_user_session_path %>
-	<%= link_to 'Register', new_user_registration_path %>
-<% end %>
+<ul class="nav justify-content-center">
+	<% if current_user %>
+		<li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-item" %></li>
+	<% else %>
+		<li><%= link_to 'Login', new_user_session_path, class: "nav-item" %></li>
+		<li><%= link_to 'Register', new_user_registration_path, class: "nav-item" %></li>
+	<% end %>
+</ul>
