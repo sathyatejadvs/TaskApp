@@ -17,7 +17,22 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				...
+				<label for="exampleInputEmail1">Title</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title Here...">
+		    <label for="exampleFormControlTextarea1">Description</label>
+   			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+   			<div class='input-group date' id='datetimepicker1'>
+          <input type='text' class="form-control" />
+          <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+        </div>
+         <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
