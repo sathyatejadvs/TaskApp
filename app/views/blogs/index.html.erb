@@ -2,9 +2,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-	Add task
-</button>
+<%= link_to "Add Task", new_blog_path, class: "btn btn-primary"%>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -17,16 +15,21 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<label for="exampleInputEmail1">Title</label>
-		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title Here...">
-		    <label for="exampleFormControlTextarea1">Description</label>
-   			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-   			<div class='input-group date' id='datetimepicker1'>
-          <input type='text' class="form-control" />
-          <span class="input-group-addon">
-              <span class="glyphicon glyphicon-calendar"></span>
-          </span>
+				<div class="field">
+            <label for="Title">Title</label>
+            <input type="text" class="form-control" id="inputtitle" required>
         </div>
+
+        <div class="field">
+          <label for="Description">Description</label>
+          <input type="text" class="form-control" id="inputdescription" required>
+        </div>
+
+        <div class="field">
+          <label for="Due Date">Due Date</label>
+          <input type="date" class="form-control" id="inputduedate" required>
+        </div>
+      	</div>
          <script type="text/javascript">
             $(function () {
                 $('#datetimepicker1').datetimepicker();
@@ -40,7 +43,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 <div class="row">
 	<div class="col-md-3">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate odio ut enim blandit. Facilisis mauris sit amet massa vitae tortor condimentum lacinia. Eget aliquet nibh praesent tristique magna sit. Est ultricies integer quis auctor elit sed vulputate mi sit. Nisi quis eleifend quam adipiscing vitae. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Quisque id diam vel quam elementum pulvinar etiam non quam. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. At varius vel pharetra vel turpis nunc eget lorem. Est sit amet facilisis magna etiam tempor. Amet consectetur adipiscing elit pellentesque habitant. Dui ut ornare lectus sit amet. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla.
