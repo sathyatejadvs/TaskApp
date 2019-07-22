@@ -1,6 +1,5 @@
 <%- if @task.errors.blank? -%>
-	$('#col1').append('<%= @task.title %>')
-	alert("success");
+	$('#col1').append('<%= @task.title %>'+ "<br />").append('<%= @task.description %>'+ "<br />")
 	<%- else -%>
 	 alert("failed")
 <%- end -%>
