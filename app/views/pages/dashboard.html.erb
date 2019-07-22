@@ -1,2 +1,42 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Dashboards</h1>
+
+<div class="actions">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add Task</button>
+
+  <!-- Modal -->
+  <div class="modal fade" data-backdrop="static" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <%= render 'tasks/form', task: @task%>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" id= 'col1'>
+        <h2>Col-1</h2>
+        
+      </div>
+
+      <div class="col-md-3">
+        <h2>Col-2</h2>
+        <p>&nbsp;</p>
+      </div>
+
+      <div class="col-md-3">
+        <h2>Col-3</h2>
+        <p>&nbsp;</p>
+      </div>
+
+      <div class="col-md-3">
+        <h2>Col-4</h2>
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
