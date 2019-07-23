@@ -17,3 +17,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require page
+
+//= require sortable
