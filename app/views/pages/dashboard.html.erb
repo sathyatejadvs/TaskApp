@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" ><%= notice %></p>
 
 <h1>Dashboards</h1>
 
@@ -9,30 +9,30 @@
   <!-- Modal -->
   <div class="modal fade" data-backdrop="static" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <%= render 'tasks/form', task: @task%>
+      <%= render 'tasks/form', task: @task, remote: true %>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3" id= 'sortable'>
+      <div class="col-md-3">
         <h2>Bucket-1</h2>
-        <p class="card"  id= 'bucket1' >
-        </p>
+        <div class="card bucket1" id="draggable">
+        </div>
         
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-3 bucket2" id="droppable">
         <h2>Bucket-2</h2>
         <p>&nbsp;</p>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-3" id="droppable">
         <h2>Bucket-3</h2>
         <p>&nbsp;</p>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-3" id="droppable">
         <h2>Bucket-4</h2>
         <p>&nbsp;</p>
       </div>

@@ -18,4 +18,4 @@
 //= require bootstrap-sprockets
 //= require page
 
-//= require sortable
+//= require draggable_droppable
