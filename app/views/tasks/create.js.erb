@@ -1,4 +1,4 @@
-<%- if @task.errors.blank? -%>
+<%- if @tasks.errors.blank? -%>
 	$('.bucket1').append("escape_javascript <%= render 'tasks/task', task %>")
 	<%- else -%>
 	 alert("Please Fill the Details")
