@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <p id="notice" ><%= notice %></p>
 
 <h1>Dashboards</h1>
@@ -16,32 +17,34 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 border shadow">
-        <h2 class='border buttom'>Bucket-1</h2>
+        <div id='bucket1'>
+          <h2 class='border buttom'>Bucket-1</h2>
           <% @tasks.each do |task| %>
-
-            <%= render 'tasks/task', task: task %>
-
+          <%= render 'tasks/task', task: task %>
           <% end %>
-        
+        </div>
       </div>
 
-      <div class="col-md-3 border shadow" id="droppable">
-        <h2 class='border buttom'>Bucket-2</h2>
-        <p>&nbsp;</p>
-      </div>
+        <div class="col-md-3 border shadow droppable">
+          <h2 class='border buttom'>Bucket-2</h2>
+          <div id='bucket2'></div>
+          <p>&nbsp;</p>
+        </div>
 
-      <div class="col-md-3 border shadow" id="droppable">
-        <h2 class='border buttom'>Bucket-3</h2>
-        <p>&nbsp;</p>
-      </div>
+        <div class="col-md-3 border shadow droppable" id="droppable">
+          <h2 class='border buttom'>Bucket-3</h2>
+          <div id='bucket3'></div>
 
-      <div class="col-md-3 border shadow" id="droppable">
-        <h2 class='border buttom'>Bucket-4</h2>
-        <p>&nbsp;</p>
-      </div>
+          <p>&nbsp;</p>
+        </div>
 
+        <div class="col-md-3 border shadow droppable" id="droppable">
+          <h2 class='border buttom'>Bucket-4</h2>
+                    <div class="droppable" id='bucket4'></div>
+
+          <p>&nbsp;</p>
+        </div>
     </div>
-
   </div>
 
 </div>

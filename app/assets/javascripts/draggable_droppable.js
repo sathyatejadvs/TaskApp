@@ -1,12 +1,15 @@
 $(document).ready(function() {
 	
-	$('.draggable').draggable();
+	$(".draggable").draggable();
 	$(".droppable").droppable({
+
 		drop: function(event, ui) {
-			$(this)
-			.addClass( "ui-state-highlight" )
-			.find('h2')
-			location.reload(false);
+		
+		},
+		over: function(event, ui) {
+				$('.droppable.ui-state-highlight').removeClass("ui-state-highlight")
+				$(this).addClass( "ui-state-highlight" )
+
 		}
 	});
 	 

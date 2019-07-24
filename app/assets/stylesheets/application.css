@@ -4,3 +4,10 @@
 	z-index: 100;
 }
 
+.droppable {
+	min-height: 44 rem;
+}
+.form-text {
+
+	width: 29rem;
+}
