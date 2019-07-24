@@ -4,11 +4,11 @@
 <h1>Dashboards</h1>
 
 <div class="actions">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskModal">
   Add Task</button>
 
   <!-- Modal -->
-  <div class="modal fade" data-backdrop="static" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" data-backdrop="static" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <%= render 'tasks/form', task: @task, remote: true %>
     </div>
@@ -28,21 +28,16 @@
         <div class="col-md-3 border shadow droppable">
           <h2 class='border buttom'>Bucket-2</h2>
           <div id='bucket2'></div>
-          <p>&nbsp;</p>
         </div>
 
         <div class="col-md-3 border shadow droppable" id="droppable">
           <h2 class='border buttom'>Bucket-3</h2>
           <div id='bucket3'></div>
-
-          <p>&nbsp;</p>
         </div>
 
         <div class="col-md-3 border shadow droppable" id="droppable">
           <h2 class='border buttom'>Bucket-4</h2>
-                    <div class="droppable" id='bucket4'></div>
-
-          <p>&nbsp;</p>
+          <div class="droppable" id='bucket4'></div>
         </div>
     </div>
   </div>
