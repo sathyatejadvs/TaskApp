@@ -15,25 +15,30 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
-        <h2>Bucket-1</h2>
-        <div class="card bucket1" id="draggable">
+      <div class="col-md-3 border shadow">
+        <h2 class='border buttom'>Bucket-1</h2>
+        <div class="card draggable" style="width: 16rem;" >
+          <% @tasks.each do |task| %>
+
+            <%= render 'tasks/task', task: task %>
+
+          <% end %>
         </div>
         
       </div>
 
-      <div class="col-md-3 bucket2" id="droppable">
-        <h2>Bucket-2</h2>
+      <div class="col-md-3 border shadow" id="droppable">
+        <h2 class='border buttom'>Bucket-2</h2>
         <p>&nbsp;</p>
       </div>
 
-      <div class="col-md-3" id="droppable">
-        <h2>Bucket-3</h2>
+      <div class="col-md-3 border shadow" id="droppable">
+        <h2 class='border buttom'>Bucket-3</h2>
         <p>&nbsp;</p>
       </div>
 
-      <div class="col-md-3" id="droppable">
-        <h2>Bucket-4</h2>
+      <div class="col-md-3 border shadow" id="droppable">
+        <h2 class='border buttom'>Bucket-4</h2>
         <p>&nbsp;</p>
       </div>
 

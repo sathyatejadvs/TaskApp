@@ -1,5 +1,5 @@
 <%- if @task.errors.blank? -%>
-	$('.bucket1').append('<%= @task.title %>'+ "<br />").append('<%= @task.description %>'+ "<br />").append('<%= @task.due_date %>'+ "<br />")
+	$('.bucket1').append("escape_javascript <%= render 'tasks/task', task %>")
 	<%- else -%>
 	 alert("Please Fill the Details")
 <%- end -%>
