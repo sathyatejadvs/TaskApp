@@ -3,10 +3,11 @@ $(document).ready(function() {
 	
 
 
-	$(".draggable").draggable();
+	$(".draggable").draggable( {
+  	axis:'x'
+	});
+
 	$(".droppable").droppable({
-
-
 		drop: function(event, ui) {
       console.log( 'Card was moved to '+ $(this).attr('id'))
 		},
