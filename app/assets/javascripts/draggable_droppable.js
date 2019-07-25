@@ -8,8 +8,7 @@ $(document).ready(function() {
 
 
 		drop: function(event, ui) {
-
-		
+      console.log( 'Card was moved to '+ $(this).attr('id'))
 		},
 		over: function(event, ui) {
 				$('.droppable.ui-state-highlight').removeClass("ui-state-highlight")
