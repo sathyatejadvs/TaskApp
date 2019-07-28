@@ -1,7 +1,6 @@
 <%- if @task.errors.blank? -%>
 	$('#bucket1').append("<%= escape_javascript(render 'tasks/task', task: @task) %>")
   $('#taskModal').modal('hide');
-
 <%- else -%>
 	 alert("Please Fill the Details")
 <%- end -%>

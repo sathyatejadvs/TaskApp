@@ -5,7 +5,7 @@ class Task
   field :title, type: String
   field :description, type: String
   field :due_date, type: Date
-  field :status, type: String
+  field :status, type: String, default: 'bucket1'
   
   embedded_in :user
 

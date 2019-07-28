@@ -6,16 +6,25 @@ $(document).ready(function() {
 
 function dragnDrop() {
 	$(".draggable").draggable( {
-  	axis:'x'
+
 	});
 
 	$(".droppable").droppable({
+
+		 accept: ".card",
+     
 		drop: function(event, ui) {
       console.log($(ui.draggable).find('.card-title').html() +' card is moved to '+ $(this).attr('id'))
 
      var taskId = $(ui.draggable).data('task-id')
+     var bucketName = $(this).attr('id')
+
      $.ajax({
-     	url: '/tasks/'+ taskId
+     	url: '/tasks/'+ taskId,
+     	method: 'put',
+      dataType: 'script',
+      data: {task: {status: bucketName}}
+
 		}) 
    },
 	
