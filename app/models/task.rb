@@ -5,6 +5,7 @@ class Task
   field :title, type: String
   field :description, type: String
   field :due_date, type: Date
+  field :status, type: String
   
   embedded_in :user
 
