@@ -8,6 +8,7 @@ class Task
   field :status, type: String, default: 'bucket1'
   
   embedded_in :user
+  embeds_many :labels
 
   validates :title, presence: true
   validates :description, presence: true

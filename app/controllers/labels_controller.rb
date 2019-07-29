@@ -4,7 +4,7 @@ class LabelsController < ApplicationController
   # GET /labels
   # GET /labels.json
   def index
-    @labels = Label.all
+    @labels = current_user.labels
   end
 
   # GET /labels/1
@@ -69,6 +69,6 @@ class LabelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def label_params
-      params.require(:label).permit(:new_label, :tasks_id)
+      params.require(:label).permit(:new_label)
     end
 end
