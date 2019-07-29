@@ -39,3 +39,7 @@
 .signIn {
   text-align: center;
 }
+
+.card-link {
+  float: right;
+}

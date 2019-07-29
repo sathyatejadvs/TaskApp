@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :labels
   resources :tasks 
   get 'user/show'
   get 'user/edit'
