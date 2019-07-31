@@ -4,7 +4,7 @@ class LabelsController < ApplicationController
   # GET /labels
   # GET /labels.json
   def index
-    @labels = current_user.labels
+    @labels = Label.all
   end
 
   # GET /labels/1
@@ -15,6 +15,7 @@ class LabelsController < ApplicationController
   # GET /labels/new
   def new
     @label = Label.new
+
   end
 
   # GET /labels/1/edit
@@ -25,10 +26,10 @@ class LabelsController < ApplicationController
   # POST /labels.json
   def create
     @label = Label.new(label_params)
-
     respond_to do |format|
       if @label.save
         format.html { redirect_to @label, notice: 'Label was successfully created.' }
+        format.js
         format.json { render :show, status: :created, location: @label }
       else
         format.html { render :new }
@@ -69,6 +70,8 @@ class LabelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def label_params
-      params.require(:label).permit(:new_label)
+      @task = current_user.tasks.where(id: params[:label][:task_id])
+
+      params.require(:label).permit(:name)
     end
 end

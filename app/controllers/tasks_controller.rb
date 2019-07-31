@@ -65,9 +65,6 @@ class TasksController < ApplicationController
     end
   end
 
-  def drop
-    render nothing: true
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -10,6 +10,7 @@ class Task
   embedded_in :user
   embeds_many :labels
 
+
   validates :title, presence: true
   validates :description, presence: true
 end

@@ -16,46 +16,33 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3 border shadow">
+      <div class="col-md-3 border shadow droppable" id= 'bucket1'>
         <h2 class='border-bottom'>Bucket-1</h2>
-        <div class="droppable" id='bucket1'>
           <% @tasks.where(status: 'bucket1').each do |task|%>
             <%= render 'tasks/task', task: task %>
           <% end %>
-        </div>
       </div>
 
 
-        <div class="col-md-3 border shadow">
+        <div class="col-md-3 border shadow droppable" id= 'bucket2'>
           <h2 class='border buttom'>Bucket-2</h2>
-          <div class="droppable" id='bucket2'>
-            
             <% @tasks.where(status: 'bucket2').each do |task|%>
               <%= render 'tasks/task', task: task %>
             <% end %>        
-          
-          </div>
         </div>
 
-        <div class="col-md-3 border shadow">
+        <div class="col-md-3 border shadow droppable" id= 'bucket3'>
           <h2 class='border buttom'>Bucket-3</h2>
-          <div class="droppable" id='bucket3'>
-            
             <% @tasks.where(status: 'bucket3').each do |task|%>
               <%= render 'tasks/task', task: task %>
             <% end %>
-          
-          </div>
         </div>
 
-        <div class="col-md-3 border shadow">
+        <div class="col-md-3 border shadow droppable" id = 'bucket4'>
           <h2 class='border buttom'>Bucket-4</h2>
-          <div class="droppable" id='bucket4'>
-            
             <% @tasks.where(status: 'bucket4').each do |task|%>
               <%= render 'tasks/task', task: task %>
             <% end %>
-          </div>
         </div>
     </div>
   </div>

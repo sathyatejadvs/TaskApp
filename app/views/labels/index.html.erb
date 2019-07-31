@@ -5,8 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>New label</th>
-      <th>Tasks</th>
+      <th>Label</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +13,7 @@
   <tbody>
     <% @labels.each do |label| %>
       <tr>
-        <td><%= label.new_label %></td>
-        <td><%= label.tasks %></td>
+        <td><%= label.name %></td>
         <td><%= link_to 'Show', label %></td>
         <td><%= link_to 'Edit', edit_label_path(label) %></td>
         <td><%= link_to 'Destroy', label, method: :delete, data: { confirm: 'Are you sure?' } %></td>

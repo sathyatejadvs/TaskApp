@@ -29,9 +29,11 @@
 	min-height: 44 rem;
 }
 .form-text {
-
 	width: 29rem;
 	border-style: grid;
+}
+.label-field {
+  width: 17rem;
 }
 /*
  * Sessions SignIn
@@ -40,6 +42,14 @@
   text-align: center;
 }
 
+/*
+ * For Add Label button
+  */
 .btn-group {
   float: right;
+  border-radius: 50px;
+}
+
+.labelModal {
+  top: 138px;
 }

@@ -11,7 +11,6 @@
         </ul>
       </div>
     <% end %>
-
     <div class="modal-header">
       <h5 class="modal-title" id="exampleModalLabel">Add a Label</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -21,11 +20,11 @@
 
     <div class="modal-body">
       <div class="form-group">
-        <strong><%= form.label :new_label %></strong>
-        <%= form.text_field :new_label, class:'form-text'  %>
+        <strong><%= form.label :name %></strong>
+        <%= form.text_field :name, class: 'label-field'  %>
+        <%= form.hidden_field :task_id, value: task_id, class: 'label-field'  %>
       </div>
     </div>
-
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       <%= form.submit 'Save',class: 'btn btn-primary' %>
