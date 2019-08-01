@@ -19,3 +19,4 @@
 //= require page
 
 //= require draggable_droppable
+//= require labels

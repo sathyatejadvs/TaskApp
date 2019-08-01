@@ -5,11 +5,13 @@ class LabelsController < ApplicationController
   # GET /labels.json
   def index
     @labels = Label.all
+    render json: {status: "SUCCESS", message: 'Loaded Article', location: @labels }
   end
 
   # GET /labels/1
   # GET /labels/1.json
   def show
+    render json: {status: "SUCCESS", message: 'Loaded show Article', location: @labels }
   end
 
   # GET /labels/new
@@ -26,10 +28,10 @@ class LabelsController < ApplicationController
   # POST /labels.json
   def create
     @label = Label.new(label_params)
+
     respond_to do |format|
       if @label.save
         format.html { redirect_to @label, notice: 'Label was successfully created.' }
-        format.js
         format.json { render :show, status: :created, location: @label }
       else
         format.html { render :new }
