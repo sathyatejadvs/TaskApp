@@ -5,13 +5,13 @@ class LabelsController < ApplicationController
   # GET /labels.json
   def index
     @labels = Label.all
-    render json: {status: "SUCCESS", message: 'Loaded Article', location: @labels }
+    render :json => @labels 
   end
 
   # GET /labels/1
   # GET /labels/1.json
   def show
-    render json: {status: "SUCCESS", message: 'Loaded show Article', location: @labels }
+    # render :json => @label 
   end
 
   # GET /labels/new
@@ -72,7 +72,6 @@ class LabelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def label_params
-      @task = current_user.tasks.where(id: params[:label][:task_id])
 
       params.require(:label).permit(:name)
     end

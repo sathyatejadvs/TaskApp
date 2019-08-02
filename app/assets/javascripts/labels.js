@@ -1,16 +1,20 @@
 $(document).ready(function() {
-
-	newLabel();
+  $(document).on('submit', 'form.new_label', createLabel) 
 
 });
 
-function newLabel() {
-	$('.save').on('click', function() {
-			console.log ("submitted form.")
-		$.ajax({
-			url: '/labels',
-			method: 'POST',
-			dataType: 'script'
-		})
-	});
+function createLabel(e) {
+  e.preventDefault();
+  var formData = $( this ).serialize();
+
+  $.ajax({
+    url: '/labels',
+    method: 'POST',
+    dataType: 'json',
+    success: function(data, textStatus, jqXHR){
+    $('#label').append('');
+
+    },
+    data: formData
+  })
 }
